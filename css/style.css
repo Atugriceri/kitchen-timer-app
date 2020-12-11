@@ -1,0 +1,37 @@
+body {
+    font-family: 'Changa', sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.bg-warning {
+    border-radius: 13rem !important;
+    width: 35rem !important;
+    height: 31rem;
+    margin-top: 7rem !important;
+    box-shadow: 0 0 2rem .22rem #000;
+}
+
+.btn {
+    width: 7rem;
+    height: 4rem;
+    border-radius: 10rem !important;
+    box-shadow: 0 0 0.6rem .01rem rgba(0, 0, 0, 0.356);
+    font-size: 1.2rem;
+}
+
+.form-control {
+    box-shadow: 0 0 0.6rem .01rem rgba(0, 0, 0, 0.356);
+    margin-top: 0.5rem;
+    border-radius: 10rem !important;
+    font-size: 2rem;
+    width: 5rem;
+}
+
+.label-text {
+    font-size: 1.1rem;
+}

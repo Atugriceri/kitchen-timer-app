@@ -5,42 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS Files Start -->
     <link rel="stylesheet" href="css/custom/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- CSS Files Start -->
+    <!-- Font Links Start -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500;800&display=swap" rel="stylesheet">
+    <!-- Font Links End -->
     <title>Kitchen Timer</title>
 </head>
-<body>
-    <!-- ALERT DIV START -->
-    <div id="alert-dom">
-        
-    </div>
-    <!-- ALERT DIV END -->
-    
+<body class="d-flex h-100 text-center bg-dark cc_cursor">
     <section class="container bg-warning mt-5 py-5">
         <div class="row">
-            <div class="col">
+            <div class="col my-3">
                 <h1 class="text-center text-uppercase">
                 Kitchen Timer
                 </h1>
                 <form id="time-check-form" class="row g-3 justify-content-center">
                     <div class="col-auto">
-                        <label for="inputPassword2">
+                        <label for="number" class="label-text mt-3">
                         HOUR
                         </label>
                         <input type="number" id="hour" class="form-control" max="99" min="0" value="0">
                     </div>
                     <div class="col-auto">
-                        <label for="inputPassword2">
+                        <label for="number" class="label-text mt-3">
                         MINUTES
                         </label>
                         <input type="number" id="minute" class="form-control" max="60" min="0" value="0">
                     </div>
                     <div class="col-auto">
-                        <label for="inputPassword2">
+                        <label for="number" class="label-text mt-3">
                         SECONDS
                         </label>
                         <input type="number" id="second" class="form-control"max="60" min="0" value="0">
                     </div>
-                    <div class="col-12 justify-content-center flex-row d-flex">
+                    <div class="col-12 justify-content-center flex-row d-flex mt-5">
                       <button type="submit" id="set-time" class="btn btn-primary mb-3">SET</button>
                     </div>
                     <div class="row justify-content-center">

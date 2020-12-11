@@ -8,13 +8,18 @@ const BUTTON_DIV = document.querySelector('#stopContinueDiv')
 
 let startCountdown;
 
+function startInterval() {
+  startCountdown = setInterval(function() {
+    countdown()
+     }, 1000)
+}
+
+function stopInterval() {
+  clearInterval(startCountdown);
+}
+
 SET_RESET.addEventListener('click', function(){
   if (SET_RESET.innerHTML === 'SET') {
-    function startInterval() {
-      startCountdown = setInterval(function() {
-        countdown()
-         }, 1000)
-    }
       startInterval()
 
   } else if (SET_RESET.innerHTML === 'RESET') {
@@ -55,13 +60,16 @@ function addButton() { // Stop and continue buttons adding and class list settin
 
 SET_RESET.addEventListener('click', () => { // Set and reset buttons class list settings
   // If the user doesn't enter a value, run the alert function and don't add a button
-  if (SET_RESET.innerHTML === 'SET' && HOUR.value == 0 && MINUTE.value == 0 && SECOND.value == 0) { 
-    /* countdown() */
-  } else if (SET_RESET.innerHTML === 'SET') {
+  if (SET_RESET.innerHTML === 'SET') {
+    if (HOUR.value > 0 || MINUTE.value > 0 || SECOND.value > 0) {
       addButton()
       SET_RESET.innerHTML = 'RESET'
       SET_RESET.classList.remove('btn-primary')
       SET_RESET.classList.add('btn-success')
+    } else {
+        stopInterval()
+    }
+      
   } else if (SET_RESET.innerHTML === 'RESET') {
       SET_RESET.innerHTML = 'SET'
       SET_RESET.classList.remove('btn-success')
@@ -87,6 +95,3 @@ function countdown() {
     return
 }
 
-function stopInterval() {
-  clearInterval(startCountdown);
-}
