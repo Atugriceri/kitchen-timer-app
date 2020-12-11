@@ -35,3 +35,34 @@ h1 {
 .label-text {
     font-size: 1.1rem;
 }
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .bg-warning {
+        border-radius: 13rem !important;
+        width: 14rem !important;
+        height: 20rem;
+        margin-top: 2rem;
+    }
+
+    .btn {
+        width: 5rem;
+        height: 1.6rem;
+        font-size: 0.6rem;
+    }
+
+    .form-control {
+        margin-top: 0.5rem;
+        border-radius: 10rem !important;
+        font-size: 0.7rem;
+        width: 3rem;
+    }
+    
+    .label-text {
+        font-size: 0.7rem;
+    }
+
+}
